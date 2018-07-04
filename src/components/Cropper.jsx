@@ -1,5 +1,6 @@
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Rect from './Rect';
 import {clip, recursiveOffset, getOffset, getPixelRatio, assign} from '../utils';
 
@@ -341,10 +342,10 @@ export default class Cropper extends Component {
           ref='image'
           onLoad={this.onImageLoad}
           style={{
-            position: 'absolute', 
-            top: 0, 
-            left: 0, 
-            zIndex: 0, 
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: 0,
             maxWidth: '100%'
           }}
           src={this.props.src}/>

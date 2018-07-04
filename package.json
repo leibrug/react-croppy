@@ -24,9 +24,6 @@
   ],
   "author": "Eelke Hermens",
   "license": "MIT",
-  "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0-0"
-  },
   "devDependencies": {
     "babel-cli": "^6.6.5",
     "babel-core": "^6.7.2",
@@ -39,8 +36,9 @@
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "mocha-jsdom": "^1.1.0",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.1",
+    "prop-types": "^15.5.7",
+    "react": "^0.14.9",
+    "react-dom": "^0.14.9",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.2.0"
