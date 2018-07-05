@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Rect from './Rect';
 import {clip, recursiveOffset, getOffset, getPixelRatio, assign} from '../utils';
@@ -43,6 +42,7 @@ export default class Cropper extends Component {
       deltaHandler: {x: 0, y: 0},
       pixelRatio: getPixelRatio()
     };
+    this.image = null;
   }
 
   componentDidMount() {
@@ -247,8 +247,12 @@ export default class Cropper extends Component {
     this.computeDOMSizes();
   }
 
+  setImageRef = (element) => {
+    this.image = element;
+  }
+
   getImageNode() {
-    return ReactDOM.findDOMNode(this.refs.image);
+    return this.image;
   }
 
   imageDomSize() {
@@ -339,7 +343,7 @@ export default class Cropper extends Component {
           />
         </div>
         <img
-          ref='image'
+          ref={this.setImageRef}
           onLoad={this.onImageLoad}
           style={{
             position: 'absolute',
